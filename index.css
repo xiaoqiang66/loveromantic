@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0
+}
+.box{
+    width: 100%;
+    height: 100%;
+    background: url("./imgs//bg1.jpg") no-repeat center center;
+    background-size: 100% 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+}
+
+/* 外层的大魔方 */
+.box .boxcont{
+    width: 50vw;
+    height: 50vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+    animation: run 10s linear infinite;
+    display: none
+}
+@keyframes run{
+    0%{transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);}
+    100%{transform: rotateY(360deg) rotateX(-360deg) rotateZ(360deg);}
+}
+.box .boxcont>.img{
+    width: 20vw;
+    height: 20vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    box-shadow: 0px 0px  100px 20px #E71B64;
+    /* display: none */
+}
+.box .boxcont>.img>img{
+    width: 20vw;
+    height: 20vw;
+    animation: change 6s linear infinite;
+   
+}
+@keyframes change{
+    0%,10%{border-radius: 0%;}
+    20%,30%{border-radius: 25%;}
+    40%,50%{border-radius: 50%;}
+    60%,70%{border-radius: 50%;}
+    80%,90%{border-radius: 25%;}
+    100%{ border-radius: 0%}
+}
+.box .boxcont>.img:nth-child(1){
+    transform: rotateY(90deg) translateZ(-10vw);
+    border-radius: 0%;
+    animation: run1 6s linear infinite
+}
+@keyframes run1{
+    0%,10%{ transform: rotateY(90deg) translateZ(-10vw);border-radius: 0%;}
+    20%,30%{ transform: rotateY(90deg) translateZ(-20vw);border-radius: 25%;}
+    40%,50%{ transform: rotateY(90deg) translateZ(-40vw);border-radius: 50%;}
+    60%,70%{ transform: rotateY(90deg) translateZ(-40vw);border-radius: 50%;}
+    80%,90%{ transform: rotateY(90deg) translateZ(-20vw);border-radius: 25%;}
+    100%{ transform: rotateY(90deg) translateZ(-10vw);border-radius: 0%;}
+}
+.box .boxcont>.img:nth-child(2){
+    transform: rotateY(90deg) translateZ(10vw);
+    animation: run2 6s linear infinite
+}
+@keyframes run2{
+    0%,10%{ transform: rotateY(90deg) translateZ(10vw);border-radius: 0%;}
+    20%,30%{ transform: rotateY(90deg) translateZ(20vw);border-radius: 25%;}
+    40%,50%{ transform: rotateY(90deg) translateZ(40vw);border-radius: 50%;}
+    60%,70%{ transform: rotateY(90deg) translateZ(40vw);border-radius: 50%;}
+    80%,90%{ transform: rotateY(90deg) translateZ(20vw);border-radius: 25%;}
+    100%{ transform: rotateY(90deg) translateZ(10vw);border-radius: 20%;}
+}
+.box .boxcont>.img:nth-child(3){
+    transform: rotateX(90deg) translateZ(-10vw);
+    animation: run3 6s linear infinite
+}
+@keyframes run3{
+    0%,10%{ transform: rotateX(90deg) translateZ(-10vw);border-radius: 0%;}
+    20%,30%{ transform: rotateX(90deg) translateZ(-20vw);border-radius: 25%;}
+    40%,50%{ transform: rotateX(90deg) translateZ(-40vw);border-radius: 50%;}
+    60%,70%{ transform: rotateX(90deg) translateZ(-40vw);border-radius: 50%;}
+    80%,90%{ transform: rotateX(90deg) translateZ(-20vw);border-radius: 25%;}
+    100%{ transform: rotateX(90deg) translateZ(-10vw);border-radius: 20%;}
+}
+.box .boxcont>.img:nth-child(4){
+    transform: rotateX(90deg) translateZ(10vw);
+    animation: run4 6s linear infinite
+}
+@keyframes run4{
+    0%,10%{ transform: rotateX(90deg) translateZ(10vw);border-radius: 0%;}
+    20%,30%{ transform: rotateX(90deg) translateZ(20vw);border-radius: 25%;}
+    40%,50%{ transform: rotateX(90deg) translateZ(40vw);border-radius: 50%;}
+    60%,70%{ transform: rotateX(90deg) translateZ(40vw);border-radius: 50%;}
+    80%,90%{ transform: rotateX(90deg) translateZ(20vw);border-radius: 25%;}
+    100%{ transform: rotateX(90deg) translateZ(10vw);border-radius: 20%;}
+}
+.box .boxcont>.img:nth-child(5){
+    transform:  translateZ(10vw);
+    animation: run5 6s linear infinite
+}
+@keyframes run5{
+    0%,10%{ transform:translateZ(10vw);border-radius: 0%;}
+    20%,30%{ transform:translateZ(20vw);border-radius: 25%;}
+    40%,50%{ transform:translateZ(40vw);border-radius: 50%;}
+    60%,70%{ transform:translateZ(40vw);border-radius: 50%;}
+    80%,90%{ transform:translateZ(20vw);border-radius: 25%;}
+    100%{ transform:translateZ(10vw);border-radius: 50%;}
+}
+.box .boxcont>.img:nth-child(6){
+    transform:  translateZ(-10vw);
+    animation: run6 6s linear infinite
+}
+@keyframes run6{
+    0%,10%{ transform:translateZ(-10vw);border-radius: 0%;}
+    20%,30%{ transform:translateZ(-20vw);border-radius: 25%;}
+    40%,50%{ transform:translateZ(-40vw);border-radius: 50%;}
+    60%,70%{ transform:translateZ(-40vw);border-radius: 50%;}
+    80%,90%{ transform:translateZ(-20vw);border-radius: 25%;}
+    100%{ transform:translateZ(-10vw);border-radius: 20%;}
+}
+
+/* 爱心旋转 */
+.love{
+    width: 15vw;
+    height:  15vw;
+    position: absolute;
+    top: 15%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform-style: preserve-3d;
+    transform:rotateX(-10deg) rotateY(0deg);
+    animation: love 10s linear infinite 6s
+   
+}
+@keyframes love{
+    0%{transform:rotateX(-10deg) rotateY(0deg)}
+    100%{transform:rotateX(-10deg) rotateY(360deg)}
+}
+.love>div{
+    width: 15vw;
+    height:  15vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.love>div>img{
+    width: 15vw;
+    height:  15vw;
+}
+.love>div:nth-child(1){
+    animation: zhuan1 3s linear forwards 0.5s
+}
+@keyframes zhuan1{
+    0%{}
+    100%{transform: rotateY(300deg) translateZ(15vw);}
+}
+ .love>div:nth-child(2){
+    animation: zhuan2 3s linear forwards  1s
+}
+@keyframes zhuan2{
+    0%{}
+    100%{transform: rotateY(240deg) translateZ(15vw);}
+}
+.love>div:nth-child(3){
+    animation: zhuan3 3s linear forwards  1.5s
+}
+@keyframes zhuan3{
+    0%{}
+    100%{transform: rotateY(180deg) translateZ(15vw);}
+}
+ .love>div:nth-child(4){
+    animation: zhuan4 3s linear forwards  2s
+}
+@keyframes zhuan4{
+    0%{}
+    100%{transform: rotateY(120deg) translateZ(15vw);}
+}
+.love>div:nth-child(5){
+    animation: zhuan5 3s linear forwards  2.5s
+}
+@keyframes zhuan5{
+    0%{}
+    100%{transform: rotateY(60deg) translateZ(15vw);}
+}
+.love>div:nth-child(6){
+    animation: zhuan6 3s linear forwards  3s
+}
+@keyframes zhuan6{
+    0%{}
+    100%{ transform: rotateY(0deg) translateZ(15vw);}
+}  
+
+/* 爱情标题 */
+.txt{
+    width: 60vw;
+    height: 5vw;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.txt marquee{
+    font-size: 3vw;
+    color: #ffffff;
+    margin: auto;
+    font-family: "华文行楷";
+    
+}
+
+/* 爱的宣言 */
+.txts{
+    width: 50vw;
+    height: 50vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    color: #6fade1;
+    font-size: 3vw;
+    font-family: "方正喵呜体";
+    line-height: 7vw
+}
