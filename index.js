@@ -51,6 +51,19 @@ $(function () {
             "display": "block"
         })
     }, 9000);
+
+
+
+    // 解决ios音乐不自动播放的问题
+    function audioAutoPlay(id){
+        var audio = document.getElementById(id);
+        audio.play();
+        document.addEventListener("WeixinJSBridgeReady", function () {
+            audio.play();
+        }, false);
+    }
+    audioAutoPlay('audio1');
+
 });
 
 
